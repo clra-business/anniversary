@@ -1,0 +1,59 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #FFDDC1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #FF6B6B;
+}
+
+p {
+    font-size: 1.5em;
+    margin-top: 10px;
+    color: #FF6B6B;
+}
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background-image: url("us.jpg");
+    background-position: center; /* This centers the background image */
+    background-repeat: no-repeat; /* This ensures the image doesn't repeat if it's too small for the container */
+    /* Optional: Use one of the following */
+    background-size: cover; /* This scales the image to cover the entire element, might clip the image */
+    /* OR */
+    /* background-size: contain; */ /* This scales the image to be fully visible within the element, might leave some empty space */
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+
+#heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
